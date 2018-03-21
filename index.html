@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<!--Lo primero es indicar la codificación de caracteres utilizada-->
+	<meta charset="utf-8">
+	<!-- Luego los demás elementos meta, con sus atributos name y content -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!-- Nunca olvidar el título que se desplegará en la peseña del navegador
+        https://megatags.co/ es una pagina para crear tags, muy bacan, que te ayuda para considerar todo para empezar una pagina--> 
+	<title>Hola mundo!</title>
+	<!-- Podemos vincular un favicon -->
+	<link rel="icon" type="image/png" href="/media/dona.png">
+    <link href="https://fonts.googleapis.com/css?family=Patrick+Hand|Short+Stack" rel="stylesheet">
+	<!-- Podemos vincular una o varias hojas de estilo CSS -->
+	<link rel="stylesheet" href="estilo.css">
+	<!-- Podemos incluir, directamente, algunas reglas de estilo CSS -->
+	<style>…</style>
+	<!-- Podemos vincular, aquí o en otra parte, uno o varios scripts de JS--> 
+	<script src="javascript.js"></script>
+	<!-- Podemos incluir, aquí o en otra parte, y directamente, algún script de JS. Te permite hacer algo parecido al cssel srcript puede estar fuera del head--> 
+	<script>…</script>
+</head>
+<body>
+   
+	<!--primero una DIVisión. Noten que se cierra en la antepenúltima línea-->
+	<div class="container">
+        <div class="box-effect ease"></div>
+		<!--ahora un headER, con ER al final, y su lugar es el body-->
+		<header>
+		<!--aquí pondremos un par de encabezados, uno de primero nivel y otro de segundo-->
+			<h1>Este es un encabezado de primer nivel</h1>
+			<h2>Este es un encabezado de segundo nivel</h2>
+		</header>
+		<!--este es un espacio para la NAVegación. Observar los tags que permiten hacer listas, que puede ser tambien no ordenada, y solo cambia el hecho de que no hay un numero, mas sigue habiendo un orden de puntitos.
+href, junto con el simbolo # hace referencia a un hipervinculo, dentro de la pagina, cuando hacemos click en esas cosas, nos envia a distintos lugares del main. Observar la relacion entre article ID y la Href con el gato-->
+		<nav>
+			<ol>
+				<li><a href="#primero">Primer artículo</a></li>
+				<li><a href="#segundo">Segundo artículo</a></li>
+				<li><a href="#tercero">Tercer artículo</a></li>
+			</ol>
+		</nav>
+		<!--ahora vamos por lo principal-->		
+		<main>
+			<!-- vamos a abrir una sección, que contendrá 3 artículos-->
+			<section>
+				<!--noten como cada artículo repite la estructura header, section, footer. Cuando uno numera los header, el numero que tienen son la importancia, no la ubicacion, onda, en que nivel estan.-->
+				<article id="primero">
+					<header>
+						<h3>1. Esto es un encabezado de tercer nivel para el primer artículo</h3>
+					</header>
+					<section>
+						<p>Esto es un párrafo. Los párrafos no tienen niveles, por lo que nunca encontrarán un <code>&lt;p1&gt;…&lt;/p1&gt;</code> como sí podrían encontrar desde <code>&lt;h1&gt;…&lt;/h1&gt;</code> hasta <code>&lt;h6&gt;…&lt;/h6&gt;</code>.</p>
+						<p>En lo que sigue inmediatamente usaré los elementos <code>&lt;figure&gt;…&lt;/figure&gt;</code>, <code>&lt;video&gt;…&lt;/video&gt;</code> y <code>&lt;audio&gt;…&lt;/audio&gt;</code>. Los archivos estarán dentro de una carpeta de nombre <em>media</em>.</p>
+						<h4>1.1. &lt;figure&gt;…&lt;/figure&gt; Pasa el mouse por aquí</h4>
+						<p>Un elemento figure puede contener un elemento <abbr title="image">img</abbr> y además un elemento figcaption</p>
+						<figure>
+							<img src="media/end.jpg" alt="Alternativa para cuando no se vea la imagen">
+							<figcaption>The End of the F***ing World es una serie de televisión británica, basada en la novela gráfica <a href="http://www.fantagraphics.com/teotfw-en/" target="_blank" title="Graphic Novels :: The End of the Fucking World">The End of the Fucking World por Charles S. Forsman</a>.</figcaption>
+						</figure>
+						<h4>1.2. &lt;video&gt;…&lt;/video&gt; Y por acá</h4>
+						<p>Un elemento video debe contener opciones de <abbr title="source">src</abbr>, <a href="https://www.w3schools.com/tags/tag_video.asp" target="_blank">para evitar problemas de compatibilidad del formato de video con algunos navegadores</a>. También se puede abrir un link de youtube para no descargar el video durante clases.</p>
+				
+							<video width="320" height="240" controls>
+                                <source src="media/beach.mp4" type="video/mp4">
+                        
+                        </video>
+				
+						<h4>1.3. &lt;audio&gt;…&lt;/audio&gt;Aquí también</h4>
+						<p>Lo mismo pasa con el elemento audio. Debe contener opciones de <abbr title="source">src</abbr>, <a href="https://www.w3schools.com/tags/tag_audio.asp" target="_blank">para evitar problemas de compatibilidad del formato de audio con algunos navegadores</a>. También debe tener un mensaje para avisarle a los navegadores más viejos que ni siquiera están entendiendo el elemento audio.</p>
+						<audio controls>
+							<source src="media/el_audio.ogg" type="audio/ogg">
+							<source src="media/el_audio.mp3" type="audio/mpeg">
+							Un aviso, por si las moscas: Tu navegador es muy viejo, no entiende lo que es un elemento audio.
+						</audio>
+					</section>
+					<footer>
+						<p>Este es el pie de un artículo súper multimedia.</p>
+						<hr />
+					</footer>
+				</article>
+				<!--noten como cada artículo repite la estructura header, section, footer-->
+				<article id="segundo">
+					<header>
+						<h3>2. Esto es un encabezado de tercer nivel para el segundo artículo</h3>
+					</header>
+					<section>
+						<p>En lo que sigue inmediatamente usaré los elementos <code>&lt;table&gt;…&lt;/table&gt;</code>, <code>&lt;dl&gt;…&lt;/dl&gt;</code>, <code>&lt;blockquote&gt;…&lt;/blockquote&gt;</code>, además de <code>&lt;del&gt;…&lt;/del&gt;</code> e <code>&lt;ins&gt;…&lt;/ins&gt;</code>.
+						<h4>2.1. &lt;table&gt;…&lt;/table&gt;Again and again</h4>
+						<p>Las tablas tienen filas (table row: tr) y las filas tienen celdas con datos (table data: td). Algunas celdas pueden ser encabezados (table heading: th)</p>
+						<table>
+							<tr>
+								<th>Nombres</th>
+								<th>Apellidos</th>
+							</tr>
+							<tr>
+								<td>ARTICUNO</td>
+								<td>UNO</td>
+							</tr>
+							<tr>
+								<td>ZAPDOS</td>
+								<td>DOS</td>
+							</tr>
+							<tr>
+								<td>MOLTRES</td>
+								<td>TRES</td>
+							</tr>
+						</table>
+   
+						<h4>2.2. &lt;dl&gt;…&lt;/dl&gt;Sorpresa</h4>
+						<p>Las listas de descripciones (dl) puede contener uno o varios término a describir (dt) y sus respectivas descripciones (dd):</p>
+						<dl>
+							<dt>Vector</dt>
+							<dd>1. m. Agente que transporta algo de un lugar a otro. U. t. c. adj.</dd>
+							<dd>2. m. Biol. Ser vivo que puede transmitir o propagar una enfermedad.</dd>
+							<dd>3. m. Bioquím. Fragmento de ácido desoxirribonucleico que puede unir otro fragmento ajeno y transferirlo al genoma de otros organismos.</dd>
+							<dd>4. m. Fil. Toda acción proyectiva que tiene cualidad e intensidad variables.</dd>
+							<dd>5. m. Fís. Toda magnitud en la que, además de la cuantía, hay que considerar el punto de aplicación, la dirección y el sentido. Las fuerzas son vectores.</dd>
+						</dl>
+						<h4>2.3. &lt;blockquote&gt;…&lt;/blockquote&gt;Eso po</h4>
+						<p>Lo que sea contenido en este elemento corresponde a un texto citado. Si nos evitamos malas traducciones, nos evitamos confundirlo con el elemento <code>&lt;cite&gt;…&lt;/cite&gt;</code>, que también puede ser un atributo <code>…cite=""</code>, y sirve para hacer referencia al trabajo original. Donde no habría confusión sería en el uso de <code>&lt;q&gt;…&lt;/q&gt;</code>, con el que podríamos indicar una cita dentro de un párrafo.</p>
+						<blockquote cite="https://www.brainyquote.com/es/citas/stephen-hawking_627178">En la escuela, nunca estuve en entre los mejores lde la clase, pero mis compañeros debían haber visto potencial en mí, porque mi apodo era 'Einstein'.</blockquote>
+                        <q>R.I.P Stephen Hawking</q>
+						<h4>2.4. &lt;s&gt;…&lt;/s&gt;, &lt;del&gt;…&lt;/del&gt; e &lt;ins&gt;…&lt;/ins&gt;:D</h4>
+						<p>Sirven para hacer ajustes en el documento (con S marco contenidos que ya no son precisos o que ya no son relevantes, con DEL hago evidente la eliminación de un contenido y con INS hago evidente una adición al documento), como se podría hacer para: "estoy <s>felizmente</s> <del>casado</del> <ins>separado</ins>".</p>
+                        <!-- la diferencia entre Q y Blockquote, son las cremillas, y la ubicacion desde donde estamos citando -->
+					</section>
+					<footer>
+						<p>Este es el pie de un artículo súper textual.</p>
+						<hr />
+					</footer>
+				</article>
+				<!--noten como cada artículo repite la estructura header, section, footer-->
+				<article id="tercero">
+					<header>
+						<h3>3. Esto es un encabezado de tercer nivel para el tercer artículo</h3>
+					</header>
+					<section>
+						<p>Ya hemos revisado suficiente, así que juguemos un rato con lo que nos permite hacer el <a href="https://www.w3schools.com/graphics/svg_examples.asp" target="_blank" title="SVG Examples">elemento SVG</a></p>
+						<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="612px" height="792px" viewBox="0 0 612 792" enable-background="new 0 0 612 792" xml:space="preserve">
+<image overflow="visible" width="192" height="421" xlink:href="data:image/gif;base64,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
+BnqgCJqgCrqgDNqgfBAEADs=" transform="matrix(1 0 0 1 210 185)">
+</image>
+</svg>			 					
+					</section>
+					<footer>
+						<p>Este es el pie de un artículo para no traspasar la linea amarilla del <ins>metro</ins></p>
+						<hr />
+					</footer>
+				</article>
+			</section>
+		</main>
+		<!--aunque la etiqueta diga lateral, no se pondrá automáticamente al lado… eso es trabajo de CSS-->
+		<aside>
+			<p>Acá tendría que poner alguna nota secundaria, pero con importancia suficiente como para justificar tenerla a la vista, laterlamente.</p>
+		</aside>
+		<!--y con esto terminamos-->
+		<footer>
+			<p>Este es un pie de página. Llegamos al final de lo que teníamos que revisar hoy.</p>
+			<address>Aquí estan mis datos de contacto como <s>autor</s> de esta página, aqui pueden enviarme un correo a <a href="mailto:correo@correo.com">mccarreno@uc.cl</a></address>
+		</footer>
+		<!--no olviden dejar cerrados div, body y html-->
+	</div>
+</body>
+</html>
+
+
+<!--div, header, nav,  main, aside, footer, es la estructura general de la pagina. Todas estas etiquetas son nuevas de html5. Como que son super obvias y ordenan todo. Cuando intervengo una seccion, solo esa se ve reflejada en la pagina. -->
